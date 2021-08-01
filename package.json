@@ -1,6 +1,6 @@
 {
   "name": "chessgames-userscript",
-  "version": "0.7.0",
+  "version": "0.8.1",
   "title": "chessgames-userscript",
   "description": "It takes the plain-text PGN and turns it into a chess board",
   "main": "chessgames.user.js",
