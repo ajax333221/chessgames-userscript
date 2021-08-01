@@ -2,7 +2,7 @@
 // @name           Chessgames IcUi replayer
 // @author         ajax333221
 // @description    It takes the plain-text PGN and turns it into a chess board
-// @version        0.8.1
+// @version        0.8.2
 // @include        http://chessgames.com/*
 // @include        http://*.chessgames.com/*
 // @include        https://chessgames.com/*
@@ -31,9 +31,9 @@ $(function(){
 	var i, len, arr, temp, my_css, move_index, is_rotated;
 	
 	$("<link>").appendTo("head").attr({
-		type: "text/css", 
-		rel: "stylesheet",
-		href: "https://ajax333221.github.io/isepic-chess-ui/css/isepic-chess-ui.css"
+		type : "text/css", 
+		rel : "stylesheet",
+		href : "https://ajax333221.github.io/isepic-chess-ui/css/isepic-chess-ui.css"
 	});
 	
 	temp=(""+$("table tt").first().html());
