@@ -2,7 +2,7 @@
 // @name           Chessgames IcUi replayer
 // @author         ajax333221
 // @description    It takes the plain-text PGN and turns it into a chess board
-// @version        0.7.0
+// @version        0.8.0
 // @include        http://chessgames.com/*
 // @include        http://*.chessgames.com/*
 // @include        https://chessgames.com/*
@@ -28,7 +28,7 @@ function mParamUrl(){
 }
 
 $(function(){
-	var i, len, arr, temp, mycss;
+	var i, len, arr, temp, my_css, move_index, is_rotated;
 	
 	$("<link>").appendTo("head").attr({
 		type: "text/css", 
@@ -41,16 +41,20 @@ $(function(){
 	if(Ic && IcUi && temp.length>10){
 		arr=["bp", "bn", "br", "bb", "bq", "bk", "wp", "wn", "wr", "wb", "wq", "wk"];
 		
-		mycss="<style type=\"text/css\">";
-		mycss+=".ic_ui_board .ic_piece_holder{background-repeat: no-repeat;background-position: 50% 50%;display:block;}";
+		my_css="<style type=\"text/css\">";
+		my_css+=".ic_ui_board .ic_piece_holder{background-repeat: no-repeat;background-position: 50% 50%;display:block;}";
 		
 		for(i=0, len=arr.length; i<len; i++){
-			mycss+=".ic_ui_board .ic_merida .ic_"+arr[i]+"{background-image: url(\"https://ajax333221.github.io/isepic-chess-ui/css/images/chess-fonts/merida/"+arr[i]+".png\");}";
+			my_css+=".ic_ui_board .ic_merida .ic_"+arr[i]+"{background-image: url(\"https://ajax333221.github.io/isepic-chess-ui/css/images/chess-fonts/merida/"+arr[i]+".png\");}";
 		}
 		
-		mycss+="</style>";
+		my_css+="</style>";
 		
-		$(mycss).appendTo("head");
+		$(my_css).appendTo("head");
+		
+		move_index=Math.max(0, (((mParamUrl()-0.5)*2)-1));
+		
+		is_rotated=(move_index%2!==0);
 		
 		$("table tt").closest("td").css({
 			"background" : "#f0f6f7",
@@ -69,7 +73,8 @@ $(function(){
 		
 		Ic.initBoard({
 			boardName : "main",
-			moveIndex : Math.max(0, (((mParamUrl()-0.5)*2)-1)),
+			moveIndex : move_index,
+			isRotated : is_rotated,
 			pgn : temp
 		});
 	}
