@@ -21,7 +21,7 @@
   "dependencies": {
     "jquery": ">=3.3.1",
     "isepic-chess": ">=7.4.0",
-    "isepic-chess-ui": ">=4.2.1"
+    "isepic-chess-ui": ">=4.3.0"
   },
   "devDependencies": {},
   "bugs": {
