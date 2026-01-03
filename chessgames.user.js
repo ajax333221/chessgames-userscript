@@ -67,6 +67,7 @@ $(function(){
 		$("#icbuttons input").css({"margin": "0 2px", "padding": "8px 16px"});
 		$("#ic_ui_board").parent().css("margin", "0 auto");
 		
+		IcUi.setCfg("moveTooltip", true);
 		IcUi.setCfg("arrowKeysNavigation", true);
 		IcUi.setCfg("scrollNavigation", false);
 		IcUi.setCfg("soundEffects", false);
