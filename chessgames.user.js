@@ -2,7 +2,7 @@
 // @name           Chessgames IcUi replayer
 // @author         ajax333221
 // @description    It takes the plain-text PGN and turns it into a chess board
-// @version        0.9.0
+// @version        0.9.1
 // @include        http://chessgames.com/*
 // @include        http://*.chessgames.com/*
 // @include        https://chessgames.com/*
