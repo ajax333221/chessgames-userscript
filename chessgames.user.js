@@ -2,7 +2,7 @@
 // @name           Chessgames IcUi replayer
 // @author         ajax333221
 // @description    It takes the plain-text PGN and turns it into a chess board
-// @version        0.9.2
+// @version        0.9.3
 // @include        http://chessgames.com/*
 // @include        http://*.chessgames.com/*
 // @include        https://chessgames.com/*
@@ -42,7 +42,7 @@ $(function(){
 		arr=["bp", "bn", "br", "bb", "bq", "bk", "wp", "wn", "wr", "wb", "wq", "wk"];
 		
 		my_css="<style type=\"text/css\">";
-		my_css+=".ic_ui_board .ic_piece_holder{background-repeat: no-repeat;background-position: 50% 50%;display: block;}";
+		my_css+=".ic_ui_board .ic_piece_holder, #ic_ui_move_tooltip .ic_piece_holder{background-repeat: no-repeat;background-position: 50% 50%;display: block;}";
 		
 		for(i=0, len=arr.length; i<len; i++){
 			my_css+=".ic_ui_board .ic_font_merida .ic_"+arr[i]+"{background-image: url(\"https://ajax333221.github.io/isepic-chess-ui/css/images/chess-fonts/merida/"+arr[i]+".png\");}";
