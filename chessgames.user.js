@@ -2,7 +2,7 @@
 // @name           Chessgames IcUi replayer
 // @author         ajax333221
 // @description    It takes the plain-text PGN and turns it into a chess board
-// @version        0.9.1
+// @version        0.9.2
 // @include        http://chessgames.com/*
 // @include        http://*.chessgames.com/*
 // @include        https://chessgames.com/*
@@ -61,7 +61,7 @@ $(function(){
 			"padding": "24px"
 		});
 		
-		$("table tt").first().html("<div class=\"ic_ui_board\" style=\"height:500px; width:500px;\"><div id=\"ic_ui_board\"></div></div><br><div class=\"ic_ui_controls\"><div id=\"icbuttons\"><input id=\"ic_ui_nav_first\" value=\"|<\" type=\"button\"><input id=\"ic_ui_nav_previous\" value=\"<\" type=\"button\"><input id=\"ic_ui_nav_next\" value=\">\" type=\"button\"><input id=\"ic_ui_nav_last\" value=\">|\" type=\"button\"><input id=\"ic_ui_rotate\" value=\"rotate\" type=\"button\"><select id=\"ic_ui_promote\"><option value=\"5\" selected=\"selected\">queen</option><option value=\"4\">rook</option><option value=\"3\">bishop</option><option value=\"2\">knight</option></select></div><br><input id=\"ic_ui_fen\" value=\"\" type=\"text\"><br><br><div class=\"ic_ui_move_list\"><div id=\"ic_ui_move_list\"></div></div></div>");
+		$("table tt").first().html("<div class=\"ic_ui_board\" style=\"height:500px; width:500px;\"><div id=\"ic_ui_board\"></div></div><br><div class=\"ic_ui_controls\"><div id=\"icbuttons\"><input id=\"ic_ui_nav_first\" value=\"|<\" type=\"button\"><input id=\"ic_ui_nav_previous\" value=\"<\" type=\"button\"><input id=\"ic_ui_nav_next\" value=\">\" type=\"button\"><input id=\"ic_ui_nav_last\" value=\">|\" type=\"button\"><input id=\"ic_ui_rotate\" value=\"rotate\" type=\"button\"><select id=\"ic_ui_promote\"><option value=\"5\" selected=\"selected\">queen</option><option value=\"4\">rook</option><option value=\"3\">bishop</option><option value=\"2\">knight</option></select></div><br><input id=\"ic_ui_fen\" value=\"\" type=\"text\"><br><br><div class=\"ic_ui_move_list\"><div id=\"ic_ui_move_list\"></div><div id=\"ic_ui_move_tooltip\"></div></div></div>");
 		
 		$("#icbuttons").css("text-align", "center");
 		$("#icbuttons input").css({"margin": "0 2px", "padding": "8px 16px"});
